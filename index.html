@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+  :root {
+    --primary: #ff6f61;
+    --secondary: #ff3b2e;
+    --glass: rgba(255, 255, 255, 0.25);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 20px;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Floating Hearts Background */
+  .heart {
+    position: fixed;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+    animation: float 10s linear infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* Glassmorphism Sections */
+  section {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    text-align: center;
+  }
+
+  h1 { font-family: 'Dancing Script', cursive; font-size: 3.5em; margin-bottom: 10px; }
+  h2 { margin-bottom: 20px; font-weight: 700; }
+
+  /* Interactive Countdown */
+  #countdown { display: flex; justify-content: center; gap: 15px; margin: 20px 0; }
+  #countdown div {
+    background: rgba(255, 111, 97, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 80px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  #countdown span { display: block; font-size: 0.6em; opacity: 0.8; }
+
+  /* Video & Gallery */
+  .video-container {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 9/16;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 4px solid white;
+  }
+  .gallery img {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+    border: 3px solid #fff;
+    transition: transform 0.3s;
+  }
+  .gallery img:hover { transform: rotate(10deg) scale(1.1); }
+
+  /* Magic Button */
+  .btn-surprise {
+    background: var(--primary);
+    border: none;
+    padding: 15px 40px;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  .btn-surprise:hover { transform: scale(1.1); background: var(--secondary); }
+
+  #hiddenMessage {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    display: none;
+  }
+
+  .love-list { list-style: none; text-align: left; display: inline-block; }
+  .love-list li { padding: 5px 0; font-size: 1.1em; }
+
+</style>
+</head>
+<body>
+
+<div id="heart-container"></div>
+
+<section>
+  <h1>Happy Birthday ❤️ Disha</h1>
+  <p>You are the light in my universe...</p>
+</section>
+
+<section>
+  <h2>The Big Day is Coming! 🎂</h2>
+  <div id="countdown"></div>
+</section>
+
+<section>
+  <h2>Our Beautiful Memories 📸</h2>
+  <div class="gallery">
+    <img src="Disha1.jpeg" alt="Memory 1" />
+    <img src="Disha2.jpeg" alt="Memory 2" />
+    <img src="Disha3.jpeg" alt="Memory 3" />
+  </div>
+</section>
+
+<section>
+  <h2>Our Song 🎶</h2>
+  <div class="video-container">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pz8s3SfRL7g" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Why You Are Amazing 💖</h2>
+  <ul class="love-list">
+    <li>✨ That cute annoyed face you make 😒</li>
+    <li>✨ Your Angry Bird Mood 😡</li>
+    <li>✨ The way you say my name 🗣️</li>
+    <li>✨ The way you smile 😊</li>
+  </ul>
+</section>
+
+<section>
+  <button class="btn-surprise" onclick="fireworks()">Open Your Surprise 🎁</button>
+  <div id="hiddenMessage">
+    "You are my favorite person, my greatest adventure, and my home. Happy Birthday, Beautiful! 💖"
+  </div>
+</section>
+
+<script>
+  // 1. CONFETTI & MESSAGE
+  function fireworks() {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+    
+    document.getElementById('hiddenMessage').style.display = 'block';
+    document.querySelector('.btn-surprise').innerText = "I Love You! ❤️";
+  }
+
+  // 2. COUNTDOWN (Fixed for 2026)
+  const targetDate = new Date('2026-04-03T00:00:00');
+  function updateTimer() {
+    const now = new Date();
+    const diff = targetDate - now;
+    const countdown = document.getElementById('countdown');
+
+    if (diff <= 0) {
+      countdown.innerHTML = "🎉 IT'S YOUR DAY! 🎉";
+      return;
+    }
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+
+    countdown.innerHTML = `
+      <div>${d}<span>Days</span></div>
+      <div>${h.toString().padStart(2,'0')}<span>Hrs</span></div>
+      <div>${m.toString().padStart(2,'0')}<span>Min</span></div>
+      <div>${s.toString().padStart(2,'0')}<span>Sec</span></div>
+    `;
+  }
+  setInterval(updateTimer, 1000);
+  updateTimer();
+
+  // 3. GENERATE FLOATING HEARTS
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (Math.random() * 3 + 7) + 's';
+    document.getElementById('heart-container').appendChild(heart);
+    
+    setTimeout(() => { heart.remove(); }, 10000);
+  }
+  setInterval(createHeart, 500);
+
+</script>
+</body>
+</html>
