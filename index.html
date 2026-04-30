@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Happy Birthday Disha ❤️</title>
+<title>Happy Birthday Anjali! 🎂</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -12,7 +12,7 @@
   :root {
     --primary: #ff6f61;
     --secondary: #ff3b2e;
-    --glass: rgba(0, 0, 0, 0.4); /* Darker glass for better contrast */
+    --glass: rgba(0, 0, 0, 0.4); 
     --text-color: #ffffff;
   }
 
@@ -20,13 +20,14 @@
 
   body {
     font-family: 'Poppins', sans-serif;
+    /* RESTORED: Original colorful animated gradient */
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: var(--text-color);
     min-height: 100vh;
     overflow-x: hidden;
-    padding: 10px; /* Reduced for mobile */
+    padding: 10px;
   }
 
   @keyframes gradient {
@@ -35,7 +36,7 @@
     100% { background-position: 0% 50%; }
   }
 
-  /* Floating Hearts */
+  /* RESTORED: Floating Hearts Animation */
   .heart {
     position: fixed;
     font-size: 20px;
@@ -50,7 +51,6 @@
     100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
   }
 
-  /* Main Section Containers */
   section {
     background: var(--glass);
     backdrop-filter: blur(15px);
@@ -60,23 +60,21 @@
     padding: 25px;
     border-radius: 20px;
     max-width: 700px;
-    width: 95%; /* Responsive width */
+    width: 95%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
 
-  /* Headlines */
   h1 { 
     font-family: 'Dancing Script', cursive; 
-    font-size: 3rem; /* Dynamic size */
+    font-size: 3rem; 
     margin-bottom: 10px;
-    color: #ffd700; /* Gold color for better contrast */
+    color: #ffd700; 
     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
   }
 
   h2 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 700; }
 
-  /* Countdown Optimization */
   #countdown { 
     display: flex; 
     justify-content: center; 
@@ -88,7 +86,7 @@
     background: var(--primary);
     padding: 10px;
     border-radius: 12px;
-    flex: 1; /* Makes boxes equal width */
+    flex: 1;
     max-width: 80px;
     font-weight: bold;
     font-size: 1rem;
@@ -103,7 +101,6 @@
     margin-top: 4px;
   }
 
-  /* Responsive Gallery */
   .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -124,7 +121,6 @@
 
   .gallery img:hover { transform: scale(1.1) rotate(5deg); }
 
-  /* Video (Shorts aspect ratio) */
   .video-container {
     width: 100%;
     max-width: 280px;
@@ -136,7 +132,6 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   }
 
-  /* Interactive Button */
   .btn-surprise {
     background: linear-gradient(45deg, var(--primary), #ff4757);
     border: none;
@@ -156,23 +151,21 @@
 
   #hiddenMessage {
     margin-top: 20px;
-    font-size: 1.3rem;
-    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     display: none;
     padding: 10px;
+    color: #fff;
   }
 
-  .love-list { list-style: none; text-align: left; display: inline-block; }
-  .love-list li { padding: 8px 0; font-size: 1rem; }
+  .friendship-list { list-style: none; text-align: left; display: inline-block; }
+  .friendship-list li { padding: 12px 0; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-  /* Mobile-Specific Tweaks */
   @media (max-width: 480px) {
     h1 { font-size: 2.3rem; }
     h2 { font-size: 1.3rem; }
     .gallery img { width: 100px; height: 100px; }
-    #countdown div { padding: 8px 5px; font-size: 0.9rem; }
-    section { padding: 20px 15px; }
   }
 </style>
 </head>
@@ -181,52 +174,56 @@
 <div id="heart-container"></div>
 
 <section>
-  <h1>Happy Birthday Disha ❤️</h1>
-  <p style="font-style: italic; opacity: 0.9;">You are the light in my universe...</p>
+  <h1>Happy Birthday Anjali! 🥳</h1>
+  <p style="font-style: italic; opacity: 0.9;">To one of the most favorite people in my life...</p>
 </section>
 
 <section>
-  <h2>The Celebration Begins In... 🎂</h2>
+  <h2>The Party Starts In... 🕒</h2>
   <div id="countdown"></div>
 </section>
 
 <section>
-  <h2>Our Beautiful Memories 📸</h2>
+  <h2>Captured Moments 📸</h2>
   <div class="gallery">
-    <img src="Disha1.jpeg" alt="Memory 1" />
-    <img src="Disha2.jpeg" alt="Memory 2" />
-    <img src="Disha3.jpeg" alt="Memory 3" />
+    <img src="pic2.png" alt="Memories" />
+    <img src="pic1.png" alt="Memories" />
+    <img src="pic3.png" alt="Memories" />
   </div>
 </section>
 
 <section>
-  <h2>A Song for You 🎶</h2>
+  <h2>A Vibe Check 🎶</h2>
   <div class="video-container">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pz8s3SfRL7g" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="100%" src="e_d_b_a_e_b_mp_.mp4" frameborder="0" allowfullscreen></iframe>
   </div>
 </section>
 
 <section>
-  <h2>Why You Are Amazing 💖</h2>
-  <ul class="love-list">
-    <li>✨ That cute annoyed face you make 😒</li>
-    <li>✨ Your Angry Bird Mood 😡🐦</li>
-    <li>✨ The way you say my name 🗣️✨</li>
-    <li>✨ The way you smile 😊💖</li>
+  <h2>What Makes You Awesome ✨</h2>
+  <ul class="friendship-list">
+    <li>🧠 Your overthinking deserves its own Netflix series. One small text and suddenly you’ve imagined 84 future possibilities.</li>
+    <li>🥺 You are so super cute that even babies would probably call you adorable.</li>
+    <li>🔥 Being this hot and beautiful together should honestly be illegal. You’re out here causing emotional damage casually.</li>
+    <li>😤 Your stubbornness is actually impressive. Even if the GPS says “turn left,” you’ll still argue with it confidently.</li>
   </ul>
 </section>
 
 <section>
-  <button class="btn-surprise" onclick="fireworks()">Open Your Surprise 🎁</button>
+  <button class="btn-surprise" onclick="celebrate()">Tap for a Surprise 🎁</button>
   <div id="hiddenMessage">
-    "Disha, you make life feel like a celebration every single day. <br>
-    May your birthday be as beautiful as your smile! ❤️"
+    <h1 style="font-size: 2rem;">Happy Birthday, Anjali! 🎂❤️</h1>
+    <p>
+    Life honestly feels happier, crazier, and more beautiful with you in it.  
+    Your cute drama, overthinking, stubbornness, and smile make you impossible not to like.  
+    Stay the same amazing girl you are — and keep making everyone's life special just by being in it. ✨❤️
+    </p>
   </div>
 </section>
 
 <script>
   // 1. CONFETTI & MESSAGE
-  function fireworks() {
+  function celebrate() {
     confetti({
       particleCount: 150,
       spread: 70,
@@ -235,16 +232,15 @@
     });
     
     document.getElementById('hiddenMessage').style.display = 'block';
-    document.querySelector('.btn-surprise').innerText = "I Love You! ❤️";
+    document.querySelector('.btn-surprise').innerText = "Cheers to you! 🥂";
     
-    // Auto-scroll to message
     setTimeout(() => {
       document.getElementById('hiddenMessage').scrollIntoView({ behavior: 'smooth' });
     }, 100);
   }
 
-  // 2. COUNTDOWN (Set for April 3, 2026)
-  const targetDate = new Date('2026-04-03T00:00:00').getTime();
+  // 2. COUNTDOWN
+  const targetDate = new Date('2026-05-01T00:00:00').getTime(); 
   
   function updateTimer() {
     const now = new Date().getTime();
@@ -252,13 +248,13 @@
     const cd = document.getElementById('countdown');
 
     if (diff <= 0) {
-      cd.innerHTML = "<h2 style='color:#ffd700'>🎉 IT'S YOUR DAY! 🎉</h2>";
+      cd.innerHTML = "<h2 style='color:#ffd700'>🎉 IT'S CELEBRATION TIME! 🎉</h2>";
       return;
     }
 
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((gap = diff % (1000 * 60 * 60)) / (1000 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const s = Math.floor((diff % (1000 * 60)) / 1000);
 
     cd.innerHTML = `
@@ -271,7 +267,7 @@
   setInterval(updateTimer, 1000);
   updateTimer();
 
-  // 3. GENERATE FLOATING HEARTS (Lower frequency for better performance)
+  // 3. GENERATE FLOATING HEARTS (Same as Disha version)
   function createHeart() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
